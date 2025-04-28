@@ -2,8 +2,7 @@
 
 This project implements our paper.
 
-![TRIP](figs/f_TRIP.png)
-
+ ![TRIP](/figs/f_TRIP.png)
 **Abstract:** Federated domain generalization (FedDG) aims to learn a globally generalizable model from decentralized clients with heterogeneous data while preserving privacy. Recent studies have introduced prompt learning to adapt vision-language models (VLMs) in FedDG by learning a single global prompt. However,
 such a one-prompt-fits-all learning paradigm typically leads to performance degradation on personalized samples. Although the mixture of experts (MoE) offers a promising solution for specialization, existing MoE-based methods suffer from coarse image-level expert assignment and high communication costs from parameterized routers. To address these limitations, we propose TRIP, a Token-level pRompt mIxture with Parameter-free routing framework for FedDG, which treats multiple prompts as distinct experts. Unlike existing image-level routing designs, TRIP assigns different tokens within an image to specific experts. To ensure communication efficiency, TRIP incorporates a parameter-free routing mechanism based on token clustering and optimal transport. The instance-specific prompt is then synthesized by aggregating experts, weighted by the number of tokens assigned to each. Additionally, TRIP develops an unbiased
 learning strategy for prompt experts, leveraging the VLM’s zeroshot generalization capability. Extensive experiments across four benchmarks demonstrate that TRIP achieves optimal generalization results, with communicating only 1K parameters per round.  
