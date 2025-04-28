@@ -18,8 +18,6 @@ $ pip install -r requirements.txt
 $ pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
 ```
 
-## Dataset
-
 ## Datasets
 
 [
@@ -31,6 +29,15 @@ PACS](https://wjdcloud.blob.core.windows.net/dataset/PACS.zip).
 
 [DomainNet](https://ai.bu.edu/M3SDA/)  (Download the **cleaned** version of split files  for DomainNet dataset.)
 
+## How to run
+Before running the training script, you should generate the  weights for prompt  experts  using the code in /utils/generate_weights_multi.py.
+We also provided the weights in  weight_dir.
+
+We provide the commands  in Office-Home to reproduce the results.
+
+```shell
+bash tarin.sh
+```
 ## Results on Office-Home
 
 | Methods              | Art          | Clipart      | Product      | Real         | Average      | Com.cost      |
@@ -41,31 +48,6 @@ PACS](https://wjdcloud.blob.core.windows.net/dataset/PACS.zip).
 | FedAPT               | 82.96        | <u>70.98</u> | 91.33        | 90.51        | 83.94        | 0.534M        |
 | **TRIP-Lite (Ours)** | <u>84.21</u> | 70.19        | <u>92.34</u> | <u>91.41</u> | <u>84.53</u> | **0.001M**    |
 | **TRIP (Ours)**      | **85.49**    | **71.22**    | **92.97**    | **91.79**    | **85.37**    | <u>0.065M</u> |
-
-## How to run
-
-Before running the training script, you should generate the  weights for prompt  experts  using the code in /utils/generate_weights_multi.py.
-
-We also provided the weights in  weight_dir.
-
-We provide the commands  in Office-Home to reproduce the results.
-
-```shell
-bash tarin.sh
-```
-
-## Results
-
-**PACS**
-
-| Backbone | AlexNet |         |  CLIP  |         |           |
-| -------- | :-----: | :-----: | :----: | :-----: | :-------: |
-| Methods  | FedAVG  | FedProx | FedAVG | FedProx |   Ours    |
-| A        |  60.93  |  59.89  | 64.65  |  77.81  | **95.15** |
-| C        |  57.99  |  58.88  |  84.5  |  87.95  | **95.36** |
-| P        |  59.68  |  59.41  | 87.87  |  89.42  | **95.46** |
-| S        |  56.14  |  55.89  | 89.16  |  90.08  | **94.99** |
-| AVG      |  58.69  |  58.52  | 81.55  |  86.32  | **95.24** |
 
 ## Contact
 
