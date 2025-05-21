@@ -54,9 +54,14 @@ bash tarin.sh
 - gsh8210@163.com
 - crcui@sdufe.edu.cn  
 
-## References
-
+## Citation
+If you find our paper and code useful for your research, please consider citing our paper:
 ```
-
+@article{gong2025token,
+  title={Token-Level Prompt Mixture with Parameter-Free Routing for Federated Domain Generalization},
+  author={Gong, Shuai and Cui, Chaoran and Dong, Xiaolin and Nie, Xiushan and Zhu, Lei and Chang, Xiaojun},
+  journal={arXiv preprint arXiv:2504.21063},
+  year={2025}
+}
 ```
 
